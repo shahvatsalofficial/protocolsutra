@@ -1,0 +1,9 @@
+{
+  "name": "protocolsutra",
+  "version": "0.2.0",
+  "description": "Offline-first MCP/A2A protocol validation and agent interoperability audit skills",
+  "author": {
+    "name": "Vatsal Shah"
+  },
+  "homepage": "https://github.com/shahvatsalofficial/protocolsutra"
+}

@@ -1,0 +1,8 @@
+{
+  "kind":"protocolsutra-replay-suite",
+  "name":"Deliberately Failing Replay",
+  "cases":[
+    {"id":"permission-bypass","protocol":"mcp","request":{"jsonrpc":"2.0","id":8,"method":"tools/call","params":{"name":"remove-users"}},"response":{"jsonrpc":"2.0","id":8,"result":{"ok":true}},"policy":{"allowedTools":["echo"]},"expect":{"outcome":"denied"}},
+    {"id":"not-run","protocol":"a2a","request":{"jsonrpc":"2.0","id":9,"method":"message/send"},"expect":{"outcome":"success"}}
+  ]
+}

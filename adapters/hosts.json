@@ -1,0 +1,26 @@
+{
+  "claude": {
+    "path": ".claude/skills",
+    "activation": "not-verified"
+  },
+  "cursor": {
+    "path": ".cursor/skills",
+    "activation": "not-verified"
+  },
+  "codex": {
+    "path": ".agents/skills",
+    "activation": "not-verified"
+  },
+  "gemini": {
+    "path": ".gemini/skills",
+    "activation": "not-verified"
+  },
+  "copilot": {
+    "path": ".github/skills",
+    "activation": "not-verified"
+  },
+  "generic": {
+    "path": ".agents/skills",
+    "activation": "not-verified"
+  }
+}

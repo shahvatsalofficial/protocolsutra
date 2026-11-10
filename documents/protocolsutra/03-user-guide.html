@@ -1,0 +1,71 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><meta name="description" content="User Guide — ProtocolSutra AI documentation"><title>User Guide · ProtocolSutra AI</title><style>:root{color-scheme:light dark;--bg:#f6f8fb;--card:#fff;--fg:#17202e;--mut:#556178;--bd:#d9e1ec;--acc:#2447c9;--accb:#e8edff;--code:#eef2f8}
+@media (prefers-color-scheme:dark){:root{--bg:#0e131c;--card:#161d2a;--fg:#e8edf6;--mut:#9aa7bd;--bd:#2a3547;--acc:#8aa4ff;--accb:#1b2745;--code:#1d2638}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--acc)}.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--card);padding:8px 12px;z-index:9}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);min-height:100vh}
+nav.side{position:sticky;top:0;align-self:start;height:100vh;overflow:auto;padding:24px 18px;border-right:1px solid var(--bd);background:var(--card)}
+nav.side .brand{font-weight:800;font-size:1.05rem;margin-bottom:2px}nav.side .tag{color:var(--mut);font-size:.85rem;margin-bottom:18px}
+nav.side a{display:block;padding:6px 10px;border-radius:8px;text-decoration:none;color:var(--fg);font-size:.93rem}
+nav.side a:hover{background:var(--accb)}nav.side a[aria-current=page]{background:var(--accb);color:var(--acc);font-weight:700}
+main{padding:40px clamp(18px,5vw,64px) 80px;max-width:980px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 8px}h2{font-size:1.4rem;margin:44px 0 12px;padding-top:12px;border-top:1px solid var(--bd)}h3{font-size:1.1rem;margin:28px 0 8px}h4{margin:20px 0 6px}
+.toc{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px 20px;margin:18px 0 8px}.toc strong{display:block;margin-bottom:6px;color:var(--mut);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}.toc ol{margin:0;padding-left:20px;columns:2}
+code{font:.88em ui-monospace,Menlo,Consolas,monospace;background:var(--code);padding:1px 6px;border-radius:5px}pre{background:var(--code);border:1px solid var(--bd);border-radius:12px;padding:16px 18px;overflow:auto}pre code{background:none;padding:0}
+blockquote{margin:16px 0;padding:10px 18px;border-left:4px solid var(--acc);background:var(--card);border-radius:0 10px 10px 0}
+.tw{overflow-x:auto;border:1px solid var(--bd);border-radius:12px;background:var(--card);margin:14px 0}table{border-collapse:collapse;width:100%;font-size:.93rem}th,td{padding:9px 14px;text-align:left;border-bottom:1px solid var(--bd);vertical-align:top}th{color:var(--mut);font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}tr:last-child td{border-bottom:0}
+hr{border:0;border-top:1px solid var(--bd);margin:32px 0}footer{margin-top:56px;color:var(--mut);font-size:.88rem;border-top:1px solid var(--bd);padding-top:16px}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+@media (max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--bd)}.toc ol{columns:1}}
+@media print{nav.side,.skip{display:none}.layout{display:block}}</style></head><body><a class="skip" href="#main">Skip to content</a><div class="layout"><nav class="side" aria-label="Documentation"><div class="brand">ProtocolSutra AI</div><div class="tag">v0.2.0 · Connect. Validate. Prove.</div><a href="00-start-here.html">ProtocolSutra AI — Documentation Home</a><a href="01-executive-summary.html">Executive Summary</a><a href="02-functional-guide.html">Functional Guide</a><a href="03-user-guide.html" aria-current="page">User Guide</a><a href="04-architecture.html">Architecture</a><a href="05-technical-reference.html">Technical Reference</a><a href="06-security-and-threat-model.html">Security and Threat Model</a><a href="07-evidence-and-methodology.html">Evidence and Methodology</a><a href="08-legal-and-compliance.html">Legal and Compliance Notes</a><a href="09-agents-and-skills.html">Agents and Skills</a><a href="10-faq-and-limitations.html">FAQ and Limitations</a><a href="11-roadmap-and-releases.html">Roadmap and Releases</a><a href="evidence/evidence.html">Evidence (generated)</a></nav><main id="main"><h1 id="user-guide">User Guide</h1><nav class="toc" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#requirements">Requirements</a></li><li><a href="#install">Install</a></li><li><a href="#first-run-in-60-seconds">First run in 60 seconds</a></li><li><a href="#capturing-a-snapshot">Capturing a snapshot</a></li><li><a href="#typical-workflows">Typical workflows</a></li><li><a href="#github-actions-example">GitHub Actions example</a></li><li><a href="#reading-a-report">Reading a report</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ol></nav>
+<h2 id="requirements">Requirements</h2>
+<p>Node.js 20 or newer. No other dependency, account, API key or network access.</p>
+<h2 id="install">Install</h2>
+<pre data-lang="bash" tabindex="0"><code>npx protocolsutra --help          # run without installing
+npm install --save-dev protocolsutra   # or add to a project
+npm install -g protocolsutra      # or global</code></pre>
+<p>From source:</p>
+<pre data-lang="bash" tabindex="0"><code>git clone https://github.com/shahvatsalofficial/protocolsutra.git
+cd protocolsutra
+npm test</code></pre>
+<h2 id="first-run-in-60-seconds">First run in 60 seconds</h2>
+<pre data-lang="bash" tabindex="0"><code>protocolsutra fixture create --kind mcp --out snapshot.json
+protocolsutra validate --input snapshot.json
+protocolsutra audit    --input snapshot.json --format all --out audit-report</code></pre>
+<p>Open <code>audit-report.html</code> in any browser. It works offline and contains no scripts.</p>
+<h2 id="capturing-a-snapshot">Capturing a snapshot</h2>
+<p>An <code>mcp-snapshot</code> is a JSON file you create from the output of your server&#39;s <code>tools/list</code> call:</p>
+<pre data-lang="json" tabindex="0"><code>{
+  &quot;kind&quot;: &quot;mcp-snapshot&quot;,
+  &quot;name&quot;: &quot;my-server&quot;,
+  &quot;protocolVersion&quot;: &quot;2026-07-28&quot;,
+  &quot;capabilities&quot;: { &quot;tools&quot;: {} },
+  &quot;tools&quot;: [ { &quot;name&quot;: &quot;echo&quot;, &quot;description&quot;: &quot;Echo text&quot;, &quot;inputSchema&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;properties&quot;: { &quot;text&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;maxLength&quot;: 500 } }, &quot;required&quot;: [&quot;text&quot;], &quot;additionalProperties&quot;: false } } ]
+}</code></pre>
+<p>Remove credentials before saving. ProtocolSutra redacts common secret formats but redaction is best-effort.</p>
+<h2 id="typical-workflows">Typical workflows</h2>
+<h3 id="block-breaking-changes-in-ci">Block breaking changes in CI</h3>
+<pre data-lang="bash" tabindex="0"><code>protocolsutra diff --before main-snapshot.json --after pr-snapshot.json --format all --out reports/diff</code></pre>
+<p>Exit code <code>2</code> means a breaking change was found.</p>
+<h3 id="audit-a-third-party-server-before-trusting-it">Audit a third-party server before trusting it</h3>
+<pre data-lang="bash" tabindex="0"><code>protocolsutra audit --input third-party.json --format all --out reports/audit --strict</code></pre>
+<h3 id="release-gate-over-several-reports">Release gate over several reports</h3>
+<pre data-lang="bash" tabindex="0"><code>protocolsutra validate --input snapshot.json --out reports/validate.json
+protocolsutra audit    --input snapshot.json --out reports/audit.json
+protocolsutra gate --report reports/validate.json --report reports/audit.json --format all --out reports/gate --strict</code></pre>
+<h3 id="check-a-tool-call-against-policy">Check a tool call against policy</h3>
+<pre data-lang="bash" tabindex="0"><code>protocolsutra fixture create --kind policy --out policy.json
+protocolsutra policy --policy policy.json --call call.json</code></pre>
+<h3 id="share-evidence">Share evidence</h3>
+<pre data-lang="bash" tabindex="0"><code>protocolsutra capsule export --input reports/audit.json --source &quot;PR 42&quot; --out capsule.json
+protocolsutra capsule verify --input capsule.json</code></pre>
+<h2 id="github-actions-example">GitHub Actions example</h2>
+<pre data-lang="yaml" tabindex="0"><code>- uses: actions/setup-node@v4
+  with: { node-version: 22 }
+- run: npx protocolsutra@latest audit --input snapshot.json --format all --out reports/audit --strict
+- uses: actions/upload-artifact@v4
+  if: always()
+  with: { name: protocolsutra-reports, path: reports/ }</code></pre>
+<h2 id="reading-a-report">Reading a report</h2>
+<div class="tw" role="region" tabindex="0"><table><thead><tr><th scope="col">Result</th><th scope="col">Meaning</th><th scope="col">Exit code</th></tr></thead><tbody><tr><td><code>PASS</code> / <code>GO</code></td><td>Nothing blocking within the stated scope</td><td>0</td></tr><tr><td><code>REVIEW</code></td><td>Warnings need a human decision</td><td>0 (3 with <code>--strict</code>)</td></tr><tr><td><code>INCONCLUSIVE</code></td><td>Evidence missing; no pass can be claimed</td><td>0 (3 with <code>--strict</code>)</td></tr><tr><td><code>NO_GO</code> / <code>DENY</code></td><td>Blocking failure</td><td>2</td></tr><tr><td>usage or runtime error</td><td>Bad arguments, unreadable or malformed JSON</td><td>1</td></tr></tbody></table></div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="tw" role="region" tabindex="0"><table><thead><tr><th scope="col">Symptom</th><th scope="col">Cause and fix</th></tr></thead><tbody><tr><td><code>Missing value for --input</code></td><td>An option needs a value.</td></tr><tr><td><code>--format all requires --out &lt;basename&gt;</code></td><td>Provide a base name, not a directory.</td></tr><tr><td>Exit code 1 with a JSON parse message</td><td>The input file is not valid JSON.</td></tr><tr><td><code>KIND_UNKNOWN</code></td><td>The <code>kind</code> field must be <code>mcp-snapshot</code> or <code>a2a-agent-card</code>.</td></tr><tr><td>Symlink refusal in <code>install-skills</code></td><td>The target path passes through a symlink; choose a real directory.</td></tr></tbody></table></div><footer>ProtocolSutra AI 0.2.0 · Created by Vatsal Shah · Apache-2.0 · Generated from <code>03-user-guide.md</code>. Offline evaluation tool; not an official MCP/A2A conformance suite.</footer></main></div></body></html>

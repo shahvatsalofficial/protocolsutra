@@ -1,0 +1,20 @@
+{
+  "policy": "deny-by-default for any future live execution",
+  "allowedTools": [
+    "echo",
+    "status"
+  ],
+  "requiresHumanApproval": [
+    "filesystem.write",
+    "shell.run",
+    "http.request",
+    "deploy",
+    "billing.charge"
+  ],
+  "forbiddenByDefault": [
+    "delete.all",
+    "credential.export",
+    "production.modify"
+  ],
+  "notes": "This is a sample policy. Only imported-recorded replay currently uses allowedTools; no live policy engine exists."
+}

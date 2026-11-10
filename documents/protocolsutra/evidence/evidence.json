@@ -1,0 +1,111 @@
+{
+  "generatedBy": "scripts/build-evidence.mjs",
+  "product": "ProtocolSutra AI",
+  "version": "0.2.0",
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "win32",
+    "arch": "x64",
+    "osRelease": "10.0.26300",
+    "cpus": 14
+  },
+  "tests": {
+    "total": 121,
+    "pass": 121,
+    "fail": 0,
+    "skipped": 0,
+    "exitCode": 0,
+    "durationMs": 22889
+  },
+  "benchmark": {
+    "task": "tool-description poisoning detection",
+    "labeling": "Hand-labelled by the maintainer. IMPORTANT: m01-m12 and b01-b16 were written by the same person who wrote the detection rules, so results on them are optimistic. e01-e04 are deliberate evasion attempts (paraphrase, other language, encoding, indirect phrasing) added to show the limits of a regex detector. Cases are synthetic or paraphrased from public tool-poisoning research; they are NOT a random sample of real MCP servers.",
+    "corpusDigest": "6be6b51e9fd12e20c03b949487c3e1c8b42856a2539235aa9abfeeff88a4bed1",
+    "n": 32,
+    "confusion": {
+      "tp": 12,
+      "fn": 4,
+      "fp": 1,
+      "tn": 15
+    },
+    "precision": 0.923,
+    "recall": 0.75,
+    "recall95CI": [
+      0.505,
+      0.898
+    ],
+    "falsePositiveRate": 0.063,
+    "misses": [
+      "e01",
+      "e02",
+      "e03",
+      "e04"
+    ],
+    "falseAlarms": [
+      "b14"
+    ],
+    "caveat": "Small hand-labelled synthetic corpus. Intervals are wide. Detection is regex-based and an adaptive attacker can evade it. Do not extrapolate to real-world accuracy."
+  },
+  "boundary": {
+    "attacks": [
+      {
+        "attack": "path traversal ../",
+        "decision": "DENY"
+      },
+      {
+        "attack": "windows traversal",
+        "decision": "DENY"
+      },
+      {
+        "attack": "sibling-prefix path",
+        "decision": "DENY"
+      },
+      {
+        "attack": "relative path escaping roots",
+        "decision": "DENY"
+      },
+      {
+        "attack": "cloud metadata URL",
+        "decision": "DENY"
+      },
+      {
+        "attack": "loopback URL",
+        "decision": "DENY"
+      },
+      {
+        "attack": "private IPv4 URL",
+        "decision": "DENY"
+      },
+      {
+        "attack": "decimal-encoded loopback",
+        "decision": "DENY"
+      },
+      {
+        "attack": "IPv4-mapped IPv6 private",
+        "decision": "DENY"
+      },
+      {
+        "attack": "credentials in URL",
+        "decision": "DENY"
+      },
+      {
+        "attack": "unlisted tool",
+        "decision": "DENY"
+      },
+      {
+        "attack": "file:// scheme",
+        "decision": "DENY"
+      }
+    ],
+    "blocked": 12,
+    "total": 12,
+    "legitimateAllowed": 2,
+    "legitimateTotal": 2,
+    "urlOnlyChecks": true
+  },
+  "honesty": [
+    "Measured on one machine; CI results for Linux/macOS are published separately by GitHub Actions.",
+    "No live MCP/A2A server was contacted. Structural profiles are not protocol conformance.",
+    "Benchmark is small and synthetic."
+  ]
+}

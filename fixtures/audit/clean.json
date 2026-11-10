@@ -1,0 +1,10 @@
+{
+  "kind": "mcp-snapshot",
+  "name": "clean-demo",
+  "protocolVersion": "2026-07-28",
+  "capabilities": {"tools": {}},
+  "authNotes": "Local stdio only; no remote authorization.",
+  "tools": [
+    {"name": "echo", "description": "Echo provided text", "inputSchema": {"type": "object", "properties": {"text": {"type": "string", "maxLength": 500}}, "required": ["text"], "additionalProperties": false}, "annotations": {"readOnlyHint": true}}
+  ]
+}

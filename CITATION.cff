@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use ProtocolSutra AI, please cite it as below."
+title: "ProtocolSutra AI"
+abstract: "Offline-first MCP and A2A interoperability lab: structural validation, heuristic security audit, contract diff, replay, policy evaluation and sealed evidence capsules."
+type: software
+version: 0.2.0
+date-released: 2026-11-10
+license: Apache-2.0
+repository-code: "https://github.com/shahvatsalofficial/protocolsutra"
+authors:
+  - family-names: Shah
+    given-names: Vatsal
+keywords: [MCP, A2A, interoperability, security-audit, tool-poisoning, agents]

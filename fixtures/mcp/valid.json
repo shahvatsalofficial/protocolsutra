@@ -1,0 +1,10 @@
+{
+  "kind": "mcp-snapshot",
+  "name": "demo-echo-server",
+  "protocolVersion": "2026-07-28",
+  "capabilities": {"tools": {"listChanged": false}},
+  "tools": [
+    {"name": "echo", "description": "Echo provided text", "inputSchema": {"type": "object", "properties": {"text": {"type": "string"}}, "required": ["text"]}, "annotations": {"readOnlyHint": true}},
+    {"name": "status", "description": "Return simulated service status", "inputSchema": {"type": "object", "properties": {}}}
+  ]
+}

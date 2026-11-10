@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "0.2.0",
+  "evaluation": "offline-contract-diff",
+  "beforeDigest": "4651c8a84cfdeabefd79f409a6f90a073872f9d39a9608f963aeb16afc9a735a",
+  "afterDigest": "35557b74642db6570292449cc03a31cfd4c1213096bd8ae6b7222b55f00ec05e",
+  "findings": [
+    {
+      "id": "d2d5204c7beef090",
+      "rule": "TOOL_ADDED",
+      "level": "info",
+      "path": "tools.export",
+      "message": "Tool \"export\" added"
+    },
+    {
+      "id": "62be50a3f09766eb",
+      "rule": "TOOL_REMOVED",
+      "level": "error",
+      "path": "tools.legacy",
+      "message": "Tool \"legacy\" was removed"
+    },
+    {
+      "id": "124eefd473b0191b",
+      "rule": "DESCRIPTION_CHANGED",
+      "level": "info",
+      "path": "tools.search.description",
+      "message": "Description changed; re-audit for tool-poisoning (rug-pull) risk"
+    },
+    {
+      "id": "258e0c209e81bff1",
+      "rule": "CONTRACT_PROPERTY_TYPE_CHANGED",
+      "level": "error",
+      "path": "tools.search.inputSchema.properties.limit.type",
+      "message": "Type of \"limit\" changed from \"integer\" to \"string\""
+    },
+    {
+      "id": "562aad436e568045",
+      "rule": "CONTRACT_REQUIRED_ADDED",
+      "level": "error",
+      "path": "tools.search.inputSchema.properties.scope",
+      "message": "New required input \"scope\" breaks existing callers"
+    }
+  ],
+  "totals": {
+    "errors": 3,
+    "warnings": 0,
+    "info": 2
+  },
+  "gate": "NO_GO",
+  "notice": "Structural diff of two captured snapshots. It does not observe runtime behaviour; semantic changes with unchanged schemas are invisible."
+}

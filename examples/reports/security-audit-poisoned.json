@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "0.2.0",
+  "evaluation": "offline-heuristic-security-audit",
+  "kind": "mcp-snapshot",
+  "inputDigest": "bd35c86a10dc7e8765519f0c16b55350b72cc06266c4152b1998347ffcad763d",
+  "findings": [
+    {
+      "id": "558097fc47843471",
+      "rule": "AUTH_NOT_DOCUMENTED",
+      "level": "info",
+      "path": "authorization",
+      "message": "No authorization model recorded; authentication does not imply authorization",
+      "evidenceClass": "heuristic"
+    },
+    {
+      "id": "20ab54a52510bdcf",
+      "rule": "TP_CONCEAL",
+      "level": "error",
+      "path": "tools[0].description",
+      "message": "Description asks to conceal behaviour from the user (heuristic)",
+      "evidenceClass": "heuristic"
+    },
+    {
+      "id": "e1b290e0ffd41904",
+      "rule": "TP_EXFIL_DIRECTIVE",
+      "level": "error",
+      "path": "tools[0].description",
+      "message": "Description instructs data to be sent elsewhere (heuristic)",
+      "evidenceClass": "heuristic"
+    },
+    {
+      "id": "9bb8ba4e03c5dd3a",
+      "rule": "TP_HIDDEN_DIRECTIVE",
+      "level": "error",
+      "path": "tools[0].description",
+      "message": "Description contains a pseudo-system tag aimed at the model (heuristic)",
+      "evidenceClass": "heuristic"
+    },
+    {
+      "id": "391c192fe54bb6f8",
+      "rule": "TP_IGNORE_INSTRUCTIONS",
+      "level": "error",
+      "path": "tools[0].description",
+      "message": "Description tries to override prior instructions (heuristic)",
+      "evidenceClass": "heuristic"
+    },
+    {
+      "id": "d8c88f1c56d25b85",
+      "rule": "TP_SECRET_ACCESS",
+      "level": "error",
+      "path": "tools[0].description",
+      "message": "Description steers the model toward secret files (heuristic)",
+      "evidenceClass": "heuristic"
+    },
+    {
+      "id": "a290f4ebb276b18e",
+      "rule": "SCHEMA_ADDITIONAL_PROPERTIES",
+      "level": "info",
+      "path": "tools[0].inputSchema.additionalProperties",
+      "message": "additionalProperties not set to false; unexpected arguments may be accepted",
+      "evidenceClass": "heuristic"
+    },
+    {
+      "id": "16d7c8d79afca69c",
+      "rule": "ANNOTATION_NAME_CONFLICT",
+      "level": "warning",
+      "path": "tools[1].annotations",
+      "message": "readOnlyHint=true conflicts with a high-impact tool name; annotations are untrusted",
+      "evidenceClass": "heuristic"
+    },
+    {
+      "id": "04f784490c709c2c",
+      "rule": "SCHEMA_ADDITIONAL_PROPERTIES",
+      "level": "info",
+      "path": "tools[1].inputSchema.additionalProperties",
+      "message": "additionalProperties not set to false; unexpected arguments may be accepted",
+      "evidenceClass": "heuristic"
+    },
+    {
+      "id": "b199a608ed038132",
+      "rule": "SCHEMA_UNBOUNDED_STRING",
+      "level": "warning",
+      "path": "tools[1].inputSchema.properties.command",
+      "message": "\"command\" is an unconstrained string; add maxLength/pattern/enum and enforce policy at the boundary",
+      "evidenceClass": "heuristic"
+    },
+    {
+      "id": "47ff0c0e5f82db00",
+      "rule": "TOOL_HIGH_IMPACT_NAME",
+      "level": "warning",
+      "path": "tools[1].name",
+      "message": "Tool \"run_shell\" looks high-impact; require an approval gate and deny-by-default policy",
+      "evidenceClass": "heuristic"
+    },
+    {
+      "id": "3dd2f4fc4630fc8a",
+      "rule": "TP_HIDDEN_UNICODE",
+      "level": "error",
+      "path": "tools[2].description",
+      "message": "Invisible/bidi control characters can hide instructions from reviewers",
+      "evidenceClass": "heuristic"
+    }
+  ],
+  "totals": {
+    "errors": 6,
+    "warnings": 3,
+    "info": 3
+  },
+  "gate": "NO_GO",
+  "notice": "Heuristic pattern audit of static text. Zero findings is not proof of safety; findings are leads for human review. No tool was executed."
+}

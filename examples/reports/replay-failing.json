@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "0.1.0",
+  "suiteName": "Deliberately Failing Replay",
+  "suiteDigest": "90f1ce385dff39fba1252e3e34bd9fdcf6378b36f86ba063ae01b2a0cc164e03",
+  "mode": "offline-recorded-replay",
+  "scope": "Recorded JSON-RPC shape, expected results and declared local policy only",
+  "cases": [
+    {
+      "id": "permission-bypass",
+      "protocol": "mcp",
+      "requestMethod": "tools/call",
+      "status": "FAIL",
+      "findings": [
+        {
+          "id": "04f468fc0750858a",
+          "rule": "OUTCOME_MISMATCH",
+          "level": "error",
+          "path": "response",
+          "message": "Expected denied, recorded success"
+        },
+        {
+          "id": "03cbffd363255ff8",
+          "rule": "PERMISSION_BYPASS",
+          "level": "error",
+          "path": "response",
+          "message": "Recorded response succeeded for disallowed tool remove-users"
+        }
+      ],
+      "observed": "success",
+      "source": "imported-recording; not live executed"
+    },
+    {
+      "id": "not-run",
+      "protocol": "a2a",
+      "requestMethod": "message/send",
+      "status": "INCONCLUSIVE",
+      "findings": [
+        {
+          "id": "0c9a7156d98f6b68",
+          "rule": "NO_OBSERVATION",
+          "level": "warning",
+          "path": "response",
+          "message": "No recorded response; cannot mark passing"
+        }
+      ],
+      "observed": "not-run",
+      "source": "imported-recording; not live executed"
+    }
+  ],
+  "totals": {
+    "PASS": 0,
+    "FAIL": 1,
+    "INCONCLUSIVE": 1
+  },
+  "gate": "NO_GO",
+  "notice": "Replay evaluates imported records: it does not invoke actual MCP/A2A hosts and does not prove full protocol conformance."
+}

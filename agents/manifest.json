@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "0.1.0",
+  "product": "ProtocolSutra AI",
+  "creator": "Vatsal Shah",
+  "agents": [
+    {
+      "id": "protocolsutra-prime",
+      "title": "Chief Protocol & Interoperability Architect",
+      "scope": "Coordinates bounded protocol audits, selects relevant specialists and reconciles evidence.",
+      "skillPath": "skills/protocolsutra-prime/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-mcp-sentinel",
+      "title": "MCP Specification & Snapshot Auditor",
+      "scope": "Reviews MCP feature claims, version-specific required fields, tooling capabilities and structural errors.",
+      "skillPath": "skills/protocolsutra-mcp-sentinel/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-a2a-navigator",
+      "title": "A2A Agent-Card & Protocol Analyst",
+      "scope": "Checks A2A v1 agent-card shapes, declared skills, interfaces and negotiation assumptions.",
+      "skillPath": "skills/protocolsutra-a2a-navigator/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-contract-lens",
+      "title": "Schema & Contract Quality Engineer",
+      "scope": "Audits tool input/output schema contract shape and breaking-change evidence.",
+      "skillPath": "skills/protocolsutra-contract-lens/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-tool-auditor",
+      "title": "Tool Catalog & Capability Engineer",
+      "scope": "Inspects tools/list metadata, descriptions, annotations and discoverability.",
+      "skillPath": "skills/protocolsutra-tool-auditor/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-transport-doctor",
+      "title": "Transport Diagnostics Engineer",
+      "scope": "Investigates stdio, Streamable HTTP, timeouts, SSE and protocol negotiation behavior.",
+      "skillPath": "skills/protocolsutra-transport-doctor/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-auth-guardian",
+      "title": "Authentication & Token Boundary Reviewer",
+      "scope": "Assesses OAuth, bearer tokens, session isolation, token storage and authorization separation.",
+      "skillPath": "skills/protocolsutra-auth-guardian/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-permission-guard",
+      "title": "Least-Privilege & Authorization Tester",
+      "scope": "Checks permission models, denied tools, approval gates, blocked operations and escalation.",
+      "skillPath": "skills/protocolsutra-permission-guard/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-replay-lab",
+      "title": "Deterministic Replay Evaluation Engineer",
+      "scope": "Replays imported JSON-RPC fixture records and checks expectations without live execution.",
+      "skillPath": "skills/protocolsutra-replay-lab/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-fixture-smith",
+      "title": "Controlled Fixture Designer",
+      "scope": "Builds minimal safe MCP/A2A mock scenarios, positive and negative cases.",
+      "skillPath": "skills/protocolsutra-fixture-smith/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-trace-forensics",
+      "title": "Tool-Call Trace & Failure Analyst",
+      "scope": "Examines recorded message sequence, errors, state transitions and unexpected success.",
+      "skillPath": "skills/protocolsutra-trace-forensics/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-version-map",
+      "title": "Protocol Compatibility & Version Engineer",
+      "scope": "Tracks MCP/A2A protocol revisions, extension profiles and negotiation gaps.",
+      "skillPath": "skills/protocolsutra-version-map/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-compatibility-grid",
+      "title": "Cross-IDE Compatibility Curator",
+      "scope": "Summarizes host-specific test outcomes without overclaiming support.",
+      "skillPath": "skills/protocolsutra-compatibility-grid/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-interoperability-bench",
+      "title": "Multi-Agent Benchmark Engineer",
+      "scope": "Designs controlled cross-framework agent tasks and test harness methodology.",
+      "skillPath": "skills/protocolsutra-interoperability-bench/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-drift-watch",
+      "title": "Protocol & Integration Regression Engineer",
+      "scope": "Compares recorded contract snapshots and tool behavior between releases.",
+      "skillPath": "skills/protocolsutra-drift-watch/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-evidence-keeper",
+      "title": "Evidence Integrity & Reproducibility Auditor",
+      "scope": "Tracks source hashes, test provenance, restrictions and reproducibility capsules.",
+      "skillPath": "skills/protocolsutra-evidence-keeper/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-security-shield",
+      "title": "Protocol Security & Prompt Injection Auditor",
+      "scope": "Reviews SSRF, DNS rebinding, tool-result injection, credential exposure and unsafe MCP servers.",
+      "skillPath": "skills/protocolsutra-security-shield/SKILL.md"
+    },
+    {
+      "id": "protocolsutra-release-gate",
+      "title": "Compatibility Release Readiness Engineer",
+      "scope": "Determines readiness according to executed criteria, regression evidence and explicit release policy.",
+      "skillPath": "skills/protocolsutra-release-gate/SKILL.md"
+    }
+  ]
+}

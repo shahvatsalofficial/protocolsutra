@@ -1,0 +1,16 @@
+{
+  "kind":"protocolsutra-replay-suite",
+  "name":"Offline Echo and Permission Replay",
+  "cases":[
+    {
+      "id":"echo-success", "protocol":"mcp", "request":{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"echo","arguments":{"text":"hello"}}},
+      "response":{"jsonrpc":"2.0","id":1,"result":{"content":[{"type":"text","text":"hello"}],"isError":false}},
+      "policy":{"allowedTools":["echo"]},"expect":{"outcome":"success","resultSubset":{"isError":false}}
+    },
+    {
+      "id":"blocked-unsafe", "protocol":"mcp", "request":{"jsonrpc":"2.0","id":"2","method":"tools/call","params":{"name":"remove-users"}},
+      "response":{"jsonrpc":"2.0","id":"2","error":{"code":-32603,"message":"Tool not authorized"}},
+      "policy":{"allowedTools":["echo"]},"expect":{"outcome":"denied","errorCode":-32603}
+    }
+  ]
+}

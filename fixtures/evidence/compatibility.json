@@ -1,0 +1,12 @@
+{
+  "kind":"protocolsutra-matrix-evidence",
+  "entries":[
+    {"host":"mock-mcp-client", "protocol":"mcp", "version":"2026-07-28", "status":"pass", "runId":"offline-echo-demo", "caseId":"echo-success", "notes":"Imported fixture, not a live host test"},
+    {"host":"claude-code", "protocol":"mcp", "version":"2026-07-28", "status":"not-tested", "notes":"Host integration planned, not executed"},
+    {"host":"cursor", "protocol":"mcp", "version":"2026-07-28", "status":"not-tested"},
+    {"host":"codex", "protocol":"mcp", "version":"2026-07-28", "status":"not-tested"},
+    {"host":"gemini-cli", "protocol":"mcp", "version":"2026-07-28", "status":"not-tested"},
+    {"host":"github-copilot", "protocol":"mcp", "version":"2026-07-28", "status":"not-tested"},
+    {"host":"mock-a2a-client", "protocol":"a2a", "version":"1.0", "status":"not-tested", "notes":"Agent Card snapshot validated, live A2A exchange pending"}
+  ]
+}

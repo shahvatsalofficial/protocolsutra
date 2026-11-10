@@ -1,0 +1,10 @@
+/** Synthetic fixture templates. Fake data only (example.invalid, no credentials). */
+export function createFixture(kind, name = 'example') {
+  const safe = String(name).replace(/[^A-Za-z0-9 _.-]/g, '').slice(0, 60) || 'example';
+  if (kind === 'mcp') return { kind: 'mcp-snapshot', name: safe, protocolVersion: '2026-07-28', capabilities: { tools: { listChanged: false } }, tools: [{ name: 'echo', description: 'Echo provided text', inputSchema: { type: 'object', properties: { text: { type: 'string', maxLength: 1000 } }, required: ['text'], additionalProperties: false }, annotations: { readOnlyHint: true } }] };
+  if (kind === 'a2a') return { kind: 'a2a-agent-card', name: safe, version: '0.1.0', protocolVersion: '1.0', description: 'Synthetic example agent', supportedInterfaces: [{ url: 'https://agent.example.invalid/a2a', protocolBinding: 'JSONRPC' }], securitySchemes: { bearer: { type: 'http', scheme: 'bearer' } }, skills: [{ id: 'echo', name: 'Echo' }] };
+  if (kind === 'replay') return { kind: 'protocolsutra-replay-suite', name: safe, cases: [{ id: 'list-tools', protocol: 'mcp', request: { jsonrpc: '2.0', id: 1, method: 'tools/list' }, response: { jsonrpc: '2.0', id: 1, result: { tools: [] } }, expect: { outcome: 'success' } }, { id: 'denied-tool', protocol: 'mcp', request: { jsonrpc: '2.0', id: 2, method: 'tools/call', params: { name: 'remove-users' } }, response: { jsonrpc: '2.0', id: 2, error: { code: -32001, message: 'denied by policy' } }, policy: { allowedTools: ['echo'] }, expect: { outcome: 'denied' } }] };
+  if (kind === 'policy') return { kind: 'protocolsutra-policy', allowedTools: ['echo'], deniedTools: ['remove-users'], allowedHosts: [], pathRoots: ['/workspace'] };
+  if (kind === 'matrix') return { kind: 'protocolsutra-matrix-evidence', entries: [{ host: 'example-host', protocol: 'mcp', version: '2026-07-28', status: 'pass', runId: 'run-1', caseId: 'case-1', notes: 'Imported example' }] };
+  throw new Error('Fixture kind must be mcp|a2a|replay|policy|matrix');
+}

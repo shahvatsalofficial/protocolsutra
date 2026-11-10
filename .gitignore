@@ -1,0 +1,11 @@
+node_modules/
+coverage/
+.cache/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.log
+.DS_Store
+reports-private/

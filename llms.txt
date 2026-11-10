@@ -1,0 +1,21 @@
+# ProtocolSutra AI
+
+> Offline-first, zero-dependency Node.js CLI and library for MCP (Model Context Protocol) and A2A (Agent2Agent) interoperability evidence: structural validation, heuristic tool-poisoning audit, breaking-change contract diff, JSON-RPC replay, policy/SSRF screening, release gating and SHA-256 sealed evidence capsules. Reports are JSON, Markdown and self-contained HTML. Created by Vatsal Shah. Apache-2.0. Not an official conformance suite; evaluates captured files, never live servers.
+
+## Install and run
+- `npx protocolsutra --help`
+- npm: https://www.npmjs.com/package/protocolsutra
+- Source: https://github.com/shahvatsalofficial/protocolsutra
+
+## Docs
+- [Start here](documents/protocolsutra/00-start-here.md)
+- [Functional guide](documents/protocolsutra/02-functional-guide.md)
+- [Technical reference and rule catalog](documents/protocolsutra/05-technical-reference.md)
+- [Security and threat model](documents/protocolsutra/06-security-and-threat-model.md)
+- [Evidence and methodology](documents/protocolsutra/07-evidence-and-methodology.md)
+- [FAQ and limitations](documents/protocolsutra/10-faq-and-limitations.md)
+
+## Facts for citation
+- Commands: validate, audit, diff, replay, matrix, policy, regression, gate, capsule export|verify, fixture create, install-skills, serve, doctor.
+- Exit codes: 0 ok, 1 error, 2 NO_GO/DENY, 3 REVIEW/INCONCLUSIVE with --strict.
+- Limits: no live runner; heuristic detection evadable; PASS is not a security or conformance certification.

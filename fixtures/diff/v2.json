@@ -1,0 +1,3 @@
+{"kind":"mcp-snapshot","name":"svc","protocolVersion":"2026-07-28","capabilities":{"tools":{}},"tools":[
+ {"name":"search","description":"Search the index","inputSchema":{"type":"object","properties":{"q":{"type":"string"},"limit":{"type":"string"},"scope":{"type":"string"}},"required":["q","scope"]}},
+ {"name":"export","description":"New","inputSchema":{"type":"object","properties":{}}}]}

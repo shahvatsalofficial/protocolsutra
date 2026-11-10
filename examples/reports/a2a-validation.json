@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "0.1.0",
+  "evaluation": "offline-structural-profile",
+  "specificationConformance": "not-assessed",
+  "kind": "a2a-agent-card",
+  "protocolVersion": "1.0",
+  "inputDigest": "714d4157c5cba567bd4c91bf31dc23890d55a6e6b7c4f0b1bca8938146054de5",
+  "findings": [
+    {
+      "id": "57a85e717ee92f46",
+      "rule": "A2A_DESCRIPTION",
+      "level": "warning",
+      "path": "description",
+      "message": "Agent Card should explain supported capabilities"
+    },
+    {
+      "id": "d9223ad31fae8c8e",
+      "rule": "A2A_NAME",
+      "level": "error",
+      "path": "name",
+      "message": "Agent Card name is required"
+    },
+    {
+      "id": "727782e73a536028",
+      "rule": "A2A_SKILL_NAME",
+      "level": "error",
+      "path": "skills[0].name",
+      "message": "Skill name required"
+    },
+    {
+      "id": "d9b358b835c59dc9",
+      "rule": "A2A_DUPLICATE_SKILL",
+      "level": "error",
+      "path": "skills[1].id",
+      "message": "Duplicate skill ID echo"
+    },
+    {
+      "id": "572b2bc85a677bd9",
+      "rule": "A2A_INTERFACE_BINDING",
+      "level": "error",
+      "path": "supportedInterfaces[0].protocolBinding",
+      "message": "Protocol binding required"
+    },
+    {
+      "id": "8b7ba14bfcf9dd04",
+      "rule": "A2A_INTERFACE_SCHEME",
+      "level": "warning",
+      "path": "supportedInterfaces[0].url",
+      "message": "Non-HTTPS remote interface; consider TLS and authorization"
+    }
+  ],
+  "totals": {
+    "errors": 4,
+    "warnings": 2,
+    "info": 0
+  },
+  "gate": "NO_GO",
+  "notice": "Structural snapshot checks are a bounded subset, not full MCP/A2A protocol certification."
+}

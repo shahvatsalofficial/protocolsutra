@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1.0",
+  "suiteName": "Offline Echo and Permission Replay",
+  "suiteDigest": "b31e22a2051a5e9f601e4d6dbd73eddaf258e07e5f32d12b8a3c576008ec1d65",
+  "mode": "offline-recorded-replay",
+  "scope": "Recorded JSON-RPC shape, expected results and declared local policy only",
+  "cases": [
+    {
+      "id": "echo-success",
+      "protocol": "mcp",
+      "requestMethod": "tools/call",
+      "status": "PASS",
+      "findings": [],
+      "observed": "success",
+      "source": "imported-recording; not live executed"
+    },
+    {
+      "id": "blocked-unsafe",
+      "protocol": "mcp",
+      "requestMethod": "tools/call",
+      "status": "PASS",
+      "findings": [],
+      "observed": "error",
+      "source": "imported-recording; not live executed"
+    }
+  ],
+  "totals": {
+    "PASS": 2,
+    "FAIL": 0,
+    "INCONCLUSIVE": 0
+  },
+  "gate": "PASS",
+  "notice": "Replay evaluates imported records: it does not invoke actual MCP/A2A hosts and does not prove full protocol conformance."
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "mcp-snapshot",
+  "name": "malformed-tools",
+  "protocolVersion": "2026-07-28",
+  "capabilities": {},
+  "tools": [
+    {"name":"echo", "description":"unsafe", "inputSchema":{"type":"string"}},
+    {"name":"echo", "inputSchema":{"type":"object","properties":{},"required":["ghost"]}}
+  ]
+}

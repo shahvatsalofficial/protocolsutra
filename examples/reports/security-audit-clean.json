@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "0.2.0",
+  "evaluation": "offline-heuristic-security-audit",
+  "kind": "mcp-snapshot",
+  "inputDigest": "6a6729b794c74c5b94028f25cfb6ba0062323c93906ecb360c7b227d54dbb879",
+  "findings": [],
+  "totals": {
+    "errors": 0,
+    "warnings": 0,
+    "info": 0
+  },
+  "gate": "PASS",
+  "notice": "Heuristic pattern audit of static text. Zero findings is not proof of safety; findings are leads for human review. No tool was executed."
+}

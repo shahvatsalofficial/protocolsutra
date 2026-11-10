@@ -1,0 +1,56 @@
+{
+  "baseline": {
+    "mcp": "2026-07-28",
+    "a2a": "1.0.0"
+  },
+  "current": [
+    {
+      "name": "Node.js built-ins",
+      "purpose": "offline deterministic evaluation",
+      "status": "implemented"
+    }
+  ],
+  "planned": [
+    {
+      "name": "MCP TypeScript SDK v2",
+      "purpose": "real streamable HTTP and stdio client/server protocol test"
+    },
+    {
+      "name": "MCP Inspector v2",
+      "purpose": "visual and CLI protocol debugging"
+    },
+    {
+      "name": "A2A JavaScript SDK",
+      "purpose": "real agent-card and task exchange"
+    },
+    {
+      "name": "A2A Inspector / TCK",
+      "purpose": "implementation compatibility testing"
+    },
+    {
+      "name": "OpenTelemetry",
+      "purpose": "tracing and observability"
+    },
+    {
+      "name": "AJV / JSON Schema",
+      "purpose": "full schema vocabulary validation"
+    },
+    {
+      "name": "Docker or OS sandbox",
+      "purpose": "isolated untrusted tool execution"
+    },
+    {
+      "name": "Gitleaks",
+      "purpose": "secret scanning"
+    },
+    {
+      "name": "OSV-Scanner",
+      "purpose": "software dependency vulnerability scanning"
+    },
+    {
+      "name": "GitHub Actions",
+      "purpose": "cross-OS regression"
+    }
+  ],
+  "policy": "Tools optional. Verify maintenance, license and permissions. Seek approval before external calls, global installs, or execution."
+}

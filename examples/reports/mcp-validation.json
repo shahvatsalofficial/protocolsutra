@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "0.1.0",
+  "evaluation": "offline-structural-profile",
+  "specificationConformance": "not-assessed",
+  "kind": "mcp-snapshot",
+  "protocolVersion": "2026-07-28",
+  "inputDigest": "40b979f3e31fa75ffcd2ae106c2a580c105ceb20bd8dab90f4a5f4b6f4b23a2c",
+  "findings": [
+    {
+      "id": "a4f1a0477da35fc6",
+      "rule": "MCP_TOOLS_CAPABILITY",
+      "level": "warning",
+      "path": "capabilities.tools",
+      "message": "Tools listed but tools capability not explicitly recorded"
+    },
+    {
+      "id": "bc00e6d62a776690",
+      "rule": "SCHEMA_ROOT_TYPE",
+      "level": "error",
+      "path": "tools[0].inputSchema.type",
+      "message": "Tool input schema must declare type: object"
+    },
+    {
+      "id": "ac5b5161c39fe985",
+      "rule": "MCP_TOOL_DESCRIPTION",
+      "level": "warning",
+      "path": "tools[1].description",
+      "message": "No description; agent selection may be less reliable"
+    },
+    {
+      "id": "f7481adffbc963a8",
+      "rule": "SCHEMA_UNDECLARED_REQUIRED",
+      "level": "warning",
+      "path": "tools[1].inputSchema.required",
+      "message": "Required field ghost has no declared property schema"
+    },
+    {
+      "id": "6637ecce87c07adb",
+      "rule": "MCP_TOOL_DUPLICATE",
+      "level": "error",
+      "path": "tools[1].name",
+      "message": "Duplicate tool name echo"
+    }
+  ],
+  "totals": {
+    "errors": 2,
+    "warnings": 3,
+    "info": 0
+  },
+  "gate": "NO_GO",
+  "notice": "Structural snapshot checks are a bounded subset, not full MCP/A2A protocol certification."
+}

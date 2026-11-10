@@ -1,0 +1,79 @@
+{
+  "name": "protocolsutra",
+  "version": "0.2.0",
+  "private": false,
+  "description": "Offline-first MCP and A2A interoperability lab: validate snapshots, audit tool poisoning, diff contracts, replay traces, gate releases. Zero dependencies.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "Vatsal Shah",
+  "bin": {
+    "protocolsutra": "./packages/cli/index.mjs"
+  },
+  "scripts": {
+    "test": "node scripts/run-tests.mjs",
+    "check": "npm test",
+    "demo": "node scripts/demo.mjs",
+    "evidence": "node scripts/build-evidence.mjs",
+    "docs": "node scripts/build-docs.mjs",
+    "doctor": "node packages/cli/index.mjs doctor",
+    "start": "node packages/cli/index.mjs --help",
+    "prepublishOnly": "npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./packages/core/validate.mjs",
+  "exports": {
+    ".": "./packages/core/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "packages",
+    "skills",
+    "agents",
+    "adapters",
+    "rules",
+    "schemas",
+    "fixtures",
+    "workflows",
+    "templates",
+    "integrations",
+    ".claude-plugin",
+    "scripts/run-tests.mjs",
+    "docs",
+    "documents",
+    "examples",
+    "llms.txt",
+    "NOTICE",
+    "CITATION.cff"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahvatsalofficial/protocolsutra.git"
+  },
+  "homepage": "https://github.com/shahvatsalofficial/protocolsutra#readme",
+  "bugs": {
+    "url": "https://github.com/shahvatsalofficial/protocolsutra/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "a2a",
+    "agent2agent",
+    "agent-skills",
+    "interoperability",
+    "conformance",
+    "security-audit",
+    "tool-poisoning",
+    "json-rpc",
+    "claude-code",
+    "cursor",
+    "offline",
+    "cli",
+    "agents"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false
+}

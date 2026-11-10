@@ -1,0 +1,31 @@
+{
+  "name": "Protocol Release Gate",
+  "status": "workflow definition; only core CLI actions implemented",
+  "steps": [
+    {
+      "step": 1,
+      "action": "validate snapshots",
+      "requiresApproval": false
+    },
+    {
+      "step": 2,
+      "action": "run approved offline suites",
+      "requiresApproval": false
+    },
+    {
+      "step": 3,
+      "action": "compare prior evidence",
+      "requiresApproval": false
+    },
+    {
+      "step": 4,
+      "action": "review security and permissions",
+      "requiresApproval": false
+    },
+    {
+      "step": 5,
+      "action": "require owner approval",
+      "requiresApproval": true
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"kind":"protocolsutra-policy","allowedTools":["read_file","echo"],"deniedTools":["delete_file"],"allowedHosts":["api.example.com"],"pathRoots":["/workspace"]}

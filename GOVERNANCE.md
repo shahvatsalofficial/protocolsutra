@@ -1,0 +1,2 @@
+# Governance
+Project founded by Vatsal Shah. Changes to security model, evidence format, supported protocol profiles or public release require documented review. Source contributors retain attribution. Maintainers should publish decisions as ADRs, review external tool permissions and invite diverse community feedback. Public governance structure is evolving; no external organization affiliation is claimed.

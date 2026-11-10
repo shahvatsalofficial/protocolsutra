@@ -1,0 +1,24 @@
+{
+  "statuses": [
+    "PASS",
+    "REVIEW",
+    "NO_GO",
+    "INCONCLUSIVE",
+    "reported-pass",
+    "reported-fail",
+    "reported-blocked",
+    "untested"
+  ],
+  "mustInclude": [
+    "protocol",
+    "protocolVersion",
+    "sourceDigest",
+    "testOrigin",
+    "notRun"
+  ],
+  "principles": [
+    "never upgrade reported evidence to verified",
+    "never infer security from annotations",
+    "never claim all hosts compatible without live results"
+  ]
+}

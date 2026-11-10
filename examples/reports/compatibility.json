@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "0.1.0",
+  "mode": "imported-evidence-summary",
+  "evidenceDigest": "ac405ff3bdc82f35bf42ff60404961500bc8d353857a47676f099386b8defb09",
+  "rows": [
+    {
+      "host": "claude-code",
+      "protocol": "mcp",
+      "version": "2026-07-28",
+      "status": "untested",
+      "evidenceRef": null,
+      "note": "Host integration planned, not executed"
+    },
+    {
+      "host": "codex",
+      "protocol": "mcp",
+      "version": "2026-07-28",
+      "status": "untested",
+      "evidenceRef": null,
+      "note": "Imported evidence not independently verified"
+    },
+    {
+      "host": "cursor",
+      "protocol": "mcp",
+      "version": "2026-07-28",
+      "status": "untested",
+      "evidenceRef": null,
+      "note": "Imported evidence not independently verified"
+    },
+    {
+      "host": "gemini-cli",
+      "protocol": "mcp",
+      "version": "2026-07-28",
+      "status": "untested",
+      "evidenceRef": null,
+      "note": "Imported evidence not independently verified"
+    },
+    {
+      "host": "github-copilot",
+      "protocol": "mcp",
+      "version": "2026-07-28",
+      "status": "untested",
+      "evidenceRef": null,
+      "note": "Imported evidence not independently verified"
+    },
+    {
+      "host": "mock-a2a-client",
+      "protocol": "a2a",
+      "version": "1.0",
+      "status": "untested",
+      "evidenceRef": null,
+      "note": "Agent Card snapshot validated, live A2A exchange pending"
+    },
+    {
+      "host": "mock-mcp-client",
+      "protocol": "mcp",
+      "version": "2026-07-28",
+      "status": "reported-pass",
+      "evidenceRef": "offline-echo-demo/echo-success",
+      "note": "Imported fixture, not a live host test"
+    }
+  ],
+  "notice": "A reported-pass is not independently verified; a full host compatibility claim requires a captured and checked live run."
+}

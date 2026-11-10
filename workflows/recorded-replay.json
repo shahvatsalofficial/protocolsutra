@@ -1,0 +1,31 @@
+{
+  "name": "Recorded Replay",
+  "status": "workflow definition; only core CLI actions implemented",
+  "steps": [
+    {
+      "step": 1,
+      "action": "load records",
+      "requiresApproval": false
+    },
+    {
+      "step": 2,
+      "action": "check JSON-RPC pairs",
+      "requiresApproval": false
+    },
+    {
+      "step": 3,
+      "action": "check expected outcomes",
+      "requiresApproval": false
+    },
+    {
+      "step": 4,
+      "action": "detect unauthorized success",
+      "requiresApproval": false
+    },
+    {
+      "step": 5,
+      "action": "emit pass/fail/inconclusive",
+      "requiresApproval": false
+    }
+  ]
+}

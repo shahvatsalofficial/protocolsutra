@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProtocolSutra imported recorded replay (not live test)",
+  "type": "object",
+  "required": [
+    "kind",
+    "cases"
+  ],
+  "properties": {
+    "kind": {
+      "const": "protocolsutra-replay-suite"
+    },
+    "name": {
+      "type": "string"
+    },
+    "cases": {
+      "type": "array",
+      "maxItems": 500,
+      "items": {
+        "type": "object",
+        "required": [
+          "request",
+          "expect"
+        ]
+      }
+    }
+  }
+}

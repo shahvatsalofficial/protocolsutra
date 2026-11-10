@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "0.2.0",
+  "mode": "policy-evaluation",
+  "decision": "DENY",
+  "gate": "NO_GO",
+  "tool": "echo",
+  "reasons": [
+    "URL_CLOUD_METADATA:url",
+    "URL_NOT_HTTPS:url",
+    "URL_HOST_NOT_ALLOWLISTED:url"
+  ],
+  "policyDigest": "893c099daca7f5e1e4acf5efeca6bd9b50426761638489de2af23283e1a8f609",
+  "callDigest": "eacca0f6d7f9bb9a8d48e4b5d2470203f7f1da76b110d1535cd46440e56446ae",
+  "notice": "Deterministic local policy decision. Tool annotations were ignored. Not a sandbox."
+}

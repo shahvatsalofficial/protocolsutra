@@ -1,0 +1,10 @@
+{
+  "kind": "a2a-agent-card",
+  "name": "Demo Test Agent",
+  "description": "A non-networked demonstration of A2A Agent Card structural checks",
+  "version": "0.1.0",
+  "protocolVersion": "1.0",
+  "supportedInterfaces": [{"url":"https://example.invalid/a2a", "protocolBinding":"JSONRPC","protocolVersion":"1.0"}],
+  "capabilities": {"streaming": false},
+  "skills": [{"id":"echo", "name":"Echo", "description":"Echo a message", "tags":["demo"]}]
+}

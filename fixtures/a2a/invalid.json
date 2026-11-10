@@ -1,0 +1,5 @@
+{
+  "kind":"a2a-agent-card", "name":"", "version":"0.0.1", "protocolVersion":"1.0",
+  "supportedInterfaces":[{"url":"http://example.org/insecure"}],
+  "skills":[{"id":"echo"},{"id":"echo","name":"Duplicate Echo"}]
+}
