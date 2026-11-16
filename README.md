@@ -65,7 +65,7 @@ Result: `NO_GO` with `TP_IGNORE_INSTRUCTIONS`, `TP_HIDDEN_DIRECTIVE`, `TP_EXFIL_
 | Policy / SSRF adversarial calls | 12 of 12 denied, 2 of 2 legitimate allowed | `npm run evidence` |
 | Tool-poisoning heuristic on 32 labelled descriptions | recall 12/16 malicious (75 %), 1 false alarm in 16 benign; **the 4 misses are deliberate evasions** | `npm run evidence` |
 | Sample reports | deterministic; `git diff examples/` is empty after `npm run demo` | `npm run demo` |
-| CI | Linux, macOS, Windows × Node 20/22 | [Actions](https://github.com/shahvatsalofficial/protocolsutra/actions) |
+| CI | Linux, macOS, Windows × Node 20/22/24 | [Actions](https://github.com/shahvatsalofficial/protocolsutra/actions) |
 
 The benchmark is small, synthetic and partly author-written. Intervals are wide and the detector is regex-based; both are stated in [Evidence and methodology](documents/protocolsutra/07-evidence-and-methodology.md). Numbers come from `scripts/build-evidence.mjs`, not from hand-typed claims.
 
@@ -91,7 +91,7 @@ console.log(report.gate, htmlReport(report).length);
 
 ```yaml
 - run: npx protocolsutra@latest audit --input snapshot.json --format all --out reports/audit --strict
-- uses: actions/upload-artifact@v4
+- uses: actions/upload-artifact@v7
   if: always()
   with: { name: protocolsutra-reports, path: reports/ }
 ```

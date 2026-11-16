@@ -1,6 +1,6 @@
 {
   "name": "protocolsutra",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": false,
   "description": "Offline-first MCP and A2A interoperability lab: validate snapshots, audit tool poisoning, diff contracts, replay traces, gate releases. Zero dependencies.",
   "type": "module",

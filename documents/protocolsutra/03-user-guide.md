@@ -87,10 +87,10 @@ protocolsutra capsule verify --input capsule.json
 ## GitHub Actions example
 
 ```yaml
-- uses: actions/setup-node@v4
+- uses: actions/setup-node@v7
   with: { node-version: 22 }
 - run: npx protocolsutra@latest audit --input snapshot.json --format all --out reports/audit --strict
-- uses: actions/upload-artifact@v4
+- uses: actions/upload-artifact@v7
   if: always()
   with: { name: protocolsutra-reports, path: reports/ }
 ```

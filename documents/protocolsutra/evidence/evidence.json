@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/build-evidence.mjs",
   "product": "ProtocolSutra AI",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "environment": {
     "node": "v24.15.0",
     "platform": "win32",
@@ -15,7 +15,7 @@
     "fail": 0,
     "skipped": 0,
     "exitCode": 0,
-    "durationMs": 22889
+    "durationMs": 24402
   },
   "benchmark": {
     "task": "tool-description poisoning detection",

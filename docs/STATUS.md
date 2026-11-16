@@ -1,4 +1,4 @@
-# Implementation Status — v0.2.0 (2026-11-10)
+# Implementation Status — v0.2.1 (2026-11-16)
 
 ## Implemented and locally tested
 
@@ -17,7 +17,7 @@
 ## Verified how
 
 - 121 automated tests (`npm test`) on the author's Windows machine; the symlink test skips when the OS account lacks symlink permission.
-- CI matrix (Linux, macOS, Windows × Node 20/22) is configured; read the Actions tab for actual results, not this file.
+- CI matrix (Linux, macOS, Windows × Node 20/22/24) is configured; read the Actions tab for actual results, not this file.
 
 ## Planned / NOT YET implemented
 

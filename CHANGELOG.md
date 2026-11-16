@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.1 — 2026-11-16
+### Changed
+- CI and release workflows moved to current GitHub Actions majors (`checkout`, `setup-node`, `upload-artifact` v7) and Node 24 for release builds.
+- CI matrix now covers Node 20, 22 and 24 on Linux, macOS and Windows.
+- Release workflow publishes through npm trusted publishing (OIDC) with provenance; no stored npm token.
+- Installer only refuses symlinks below the project root (fixes macOS `/var` temp alias).
+### Notes
+- No runtime or API changes. Runtime dependencies remain zero.
+
 ## 0.2.0 — 2026-11-10
 ### Added
 - `audit`: heuristic security audit (tool poisoning, hidden Unicode, secrets, high-impact tools, unbounded schemas, A2A card gaps).

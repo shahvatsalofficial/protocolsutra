@@ -14,7 +14,7 @@ npm run evidence
 | Tool-poisoning detection quality | `fixtures/benchmark/audit-corpus.json` (32 labelled descriptions) | `npm run evidence` |
 | Boundary self-checks | 12 adversarial policy/SSRF calls + 2 legitimate calls | `npm run evidence` |
 | Sample reports | `examples/reports/*.{json,md,html}` | `npm run demo` |
-| CI matrix | GitHub Actions runs (Linux, macOS, Windows × Node 20/22) | See the repository Actions tab |
+| CI matrix | GitHub Actions runs (Linux, macOS, Windows × Node 20/22/24) | See the repository Actions tab |
 
 ## Benchmark method
 
