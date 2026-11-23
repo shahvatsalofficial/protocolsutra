@@ -23,7 +23,7 @@ img,svg{max-width:100%}code,pre,kbd{font-family:ui-monospace,SFMono-Regular,Menl
 .doc{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:268px minmax(0,1fr) 224px;gap:44px;padding:0 20px}
 .side{position:sticky;top:60px;align-self:start;height:calc(100vh - 60px);overflow:auto;padding:28px 6px 40px 0}
 .side h4{margin:22px 0 6px;font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}.side h4:first-child{margin-top:0}
-.side a{display:block;padding:7px 12px;border-radius:9px;color:var(--text);text-decoration:none;font-size:.93rem;border-left:3px solid transparent;line-height:1.4}
+.side a{display:block;padding:7px 12px;border-radius:9px;color:var(--text);text-decoration:none;font-size:.93rem;line-height:1.4}
 .side a:hover{background:var(--soft)}.side a[aria-current=page]{background:var(--brand-soft);color:var(--brand);font-weight:700}
 .side-top{display:none}
 .toc-r{position:sticky;top:88px;align-self:start;max-height:calc(100vh - 110px);overflow:auto;padding:4px 0 0 18px;border-left:1px solid var(--border);font-size:.86rem;margin-top:28px}
