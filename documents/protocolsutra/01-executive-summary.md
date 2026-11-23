@@ -25,7 +25,7 @@ ProtocolSutra AI gives engineers a small, auditable, offline tool that produces 
 
 ## Measured results (v0.2.0, this repository)
 
-See [Evidence and methodology](07-evidence-and-methodology.md) for the full, regenerated numbers. Headline: 121 automated tests pass on the author's Windows machine; CI runs a Linux/macOS/Windows × Node matrix on GitHub; the policy/SSRF boundary denied 12 of 12 adversarial calls while allowing 2 of 2 legitimate ones; the tool-poisoning heuristic detected 12 of 16 malicious descriptions (all 4 misses are intentional evasions) with 1 false alarm on 16 benign ones.
+See [Evidence and methodology](07-evidence-and-methodology.md) for the full, regenerated numbers. Headline: 122 automated tests pass on the author's Windows machine; CI runs a Linux/macOS/Windows × Node matrix on GitHub; the policy/SSRF boundary denied 12 of 12 adversarial calls while allowing 2 of 2 legitimate ones; the tool-poisoning heuristic detected 12 of 16 malicious descriptions (all 4 misses are intentional evasions) with 1 false alarm on 16 benign ones.
 
 ## Business value
 

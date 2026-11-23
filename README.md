@@ -61,7 +61,7 @@ Result: `NO_GO` with `TP_IGNORE_INSTRUCTIONS`, `TP_HIDDEN_DIRECTIVE`, `TP_EXFIL_
 
 | Evidence | Result (v0.2.0) | Reproduce |
 |---|---|---|
-| Automated tests | 121 passing | `npm test` |
+| Automated tests | 122 passing | `npm test` |
 | Policy / SSRF adversarial calls | 12 of 12 denied, 2 of 2 legitimate allowed | `npm run evidence` |
 | Tool-poisoning heuristic on 32 labelled descriptions | recall 12/16 malicious (75 %), 1 false alarm in 16 benign; **the 4 misses are deliberate evasions** | `npm run evidence` |
 | Sample reports | deterministic; `git diff examples/` is empty after `npm run demo` | `npm run demo` |

@@ -4,6 +4,8 @@
 
 ProtocolSutra AI is an offline-first, zero-dependency command-line lab for people who build or operate **MCP** (Model Context Protocol) servers and **A2A** (Agent2Agent) agents. It turns "I think this works" into a repeatable, evidence-backed report that anyone can re-run.
 
+{{flow:pipeline}}
+
 ## What it does today
 
 | Capability | Command | Evidence class |
@@ -28,6 +30,9 @@ Every command writes **JSON, Markdown and a self-contained HTML report** (`--for
 - A passing result means "nothing blocking found by these checks within the stated scope", never "secure" or "compliant".
 
 ## Reading order
+
+New here? Start with the [real-world scenarios](12-real-world-scenarios.md): six situations with real commands and output.
+
 
 1. [Executive summary](01-executive-summary.md) — for decision makers.
 2. [Functional guide](02-functional-guide.md) — what each feature does and does not prove.

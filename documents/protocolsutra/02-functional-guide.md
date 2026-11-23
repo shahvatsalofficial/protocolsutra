@@ -66,6 +66,8 @@ Takes two saved reports and lists findings that are new in the second. Fixed fin
 
 ## gate
 
+{{ladder}}
+
 Combines any number of reports. Worst result wins: `NO_GO` > `INCONCLUSIVE` > `REVIEW` > `PASS`. A report without a gate is `INCONCLUSIVE`. No reports at all is `INCONCLUSIVE`. `--allow-review` accepts warnings.
 
 ## capsule

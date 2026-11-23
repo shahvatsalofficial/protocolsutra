@@ -23,6 +23,8 @@ captured JSON (snapshot / card / suite / evidence / policy+call)
                                    +--> gate (worst result wins) --> CI exit code
 ```
 
+{{layers}}
+
 ## Modules
 
 | Module | Responsibility | I/O |
@@ -61,6 +63,8 @@ Dependency direction: `cli` and `server` depend on `core`; `core` depends on not
 | 9 | Static URL screening only | DNS resolution needs network access | Runtime must re-check resolved IPs |
 
 ## Trust boundaries
+
+{{flow:trust}}
 
 Everything read from a snapshot, card, trace or call is **untrusted data**. It is parsed, bounded (depth, array length, string length, tool count) and escaped on output. It is never executed, evaluated or used to select a file path.
 

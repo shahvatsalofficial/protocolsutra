@@ -114,6 +114,8 @@ All functions are synchronous, pure and throw only on malformed *arguments*; unt
 
 ## Capsule format
 
+{{flow:capsule}}
+
 ```json
 {
   "capsuleVersion": "1",

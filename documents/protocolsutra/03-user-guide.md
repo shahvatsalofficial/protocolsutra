@@ -30,6 +30,10 @@ protocolsutra audit    --input snapshot.json --format all --out audit-report
 
 Open `audit-report.html` in any browser. It works offline and contains no scripts.
 
+See the [real-world scenarios](12-real-world-scenarios.md) for complete walkthroughs.
+
+{{flow:ci}}
+
 ## Capturing a snapshot
 
 An `mcp-snapshot` is a JSON file you create from the output of your server's `tools/list` call:

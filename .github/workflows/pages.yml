@@ -29,7 +29,6 @@ jobs:
           cp -r documents/protocolsutra/. _site/
           cp examples/reports/*.html examples/reports/*.json examples/reports/*.md _site/examples/
           find _site -name '*.md' -path '_site/[0-9]*' -delete
-          cp _site/00-start-here.html _site/index.html
           touch _site/.nojekyll
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5

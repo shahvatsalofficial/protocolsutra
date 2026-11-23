@@ -4,6 +4,8 @@
 
 ProtocolSutra reads files and writes reports. By default it opens no sockets, spawns no processes and executes nothing it reads. The only network-facing component is the optional `serve` command, bound to `127.0.0.1`.
 
+{{flow:trust}}
+
 ## Assets and threats
 
 | Asset | Threat | Control implemented | Residual risk |
@@ -16,6 +18,10 @@ ProtocolSutra reads files and writes reports. By default it opens no sockets, sp
 | Evidence integrity | Tampered report | SHA-256 over canonical JSON; optional HMAC | Integrity only; HMAC key sharing means shared signing power |
 | Release decisions | False pass | Worst-result-wins gate; missing evidence is `INCONCLUSIVE` | Gate is only as good as the reports supplied |
 | Outbound requests (future) | SSRF | Static screening of URLs in `policy` | No DNS resolution: DNS rebinding must be handled by a runtime |
+
+## How `policy` decides
+
+{{checks:policy}}
 
 ## Hardening choices
 

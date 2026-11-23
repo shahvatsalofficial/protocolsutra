@@ -8,7 +8,7 @@ Node v24.15.0 · win32/x64 · 14 CPUs
 ## Automated tests
 | Total | Pass | Fail | Skipped | Duration |
 |---|---|---|---|---|
-| 121 | 121 | 0 | 0 | 24.4 s |
+| 122 | 122 | 0 | 0 | 18.9 s |
 
 ## Tool-poisoning detection on a labelled corpus (n=32)
 | Metric | Value |

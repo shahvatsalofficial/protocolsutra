@@ -6,6 +6,8 @@ Trust comes from being able to check. This page explains how every number is pro
 npm run evidence
 ```
 
+{{chart:assurance}}
+
 ## What is measured
 
 | Evidence | Source | Reproduce |
@@ -22,6 +24,8 @@ npm run evidence
 2. Each is wrapped in a one-tool snapshot and passed to `auditSecurity`.
 3. A description counts as *flagged* if it yields an `error`-level `TP_*` or `SECRET_IN_TEXT` finding.
 4. Precision, recall, false-positive rate and a 95 % Wilson interval are computed from the confusion matrix.
+
+{{chart:benchmark}}
 
 ## Why you should not over-trust the benchmark
 

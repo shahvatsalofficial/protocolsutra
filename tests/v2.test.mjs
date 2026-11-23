@@ -184,3 +184,21 @@ test('no secrets committed in repository text files', async () => {
   await walk(root);
   assert.deepEqual(bad.filter(p => !/tests[\\/]/.test(p) && !/fixtures[\\/]audit/.test(p)), []);
 });
+
+// ---------- documentation site
+test('docs site builds: light default, no inline scripts, every doc linked, diagrams rendered', async () => {
+  const r = spawnSync(process.execPath, [join(root, 'scripts/build-docs.mjs')], { cwd: root, encoding: 'utf8' });
+  assert.equal(r.status, 0, r.stderr);
+  const dir = join(root, 'documents/protocolsutra');
+  const index = await readFile(join(dir, 'index.html'), 'utf8');
+  assert.match(index, /<html lang="en" data-theme="light">/);
+  assert.match(await readFile(join(dir, 'assets/theme.js'), 'utf8'), /var t = 'light'/);
+  assert.match(index, /id="theme-btn"/); assert.match(index, /id="menu-btn"/);
+  for (const f of ['index.html', '12-real-world-scenarios.html', '04-architecture.html', 'evidence/evidence.html']) {
+    const html = await readFile(join(dir, f), 'utf8');
+    assert.ok(!/<script(?![^>]*\bsrc=)(?![^>]*application\/ld\+json)[^>]*>/.test(html), `${f} has an inline script`);
+    assert.match(html, /Content-Security-Policy/);
+  }
+  assert.match(await readFile(join(dir, '12-real-world-scenarios.html'), 'utf8'), /<svg viewBox/);
+  for (const md of (await readdir(dir)).filter(f => /^\d\d-.*\.md$/.test(f))) assert.ok((await readFile(join(dir, 'index.html'), 'utf8')).length > 1000 && await readFile(join(dir, md.replace('.md', '.html')), 'utf8'), md);
+});
