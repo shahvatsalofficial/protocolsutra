@@ -98,7 +98,7 @@ console.log(report.gate, htmlReport(report).length);
 
 ## Documentation
 
-Detailed, browsable docs (Markdown + designed HTML) live in [`documents/protocolsutra/`](documents/protocolsutra/00-start-here.md): executive summary, functional guide, user guide, architecture, technical reference and rule catalog, security and threat model, evidence and methodology, legal notes, agents and skills, FAQ, roadmap. Regenerate HTML with `npm run docs`.
+Live site: **https://shahvatsalofficial.github.io/protocolsutra/** · detailed, browsable docs (Markdown + designed HTML) live in [`documents/protocolsutra/`](documents/protocolsutra/00-start-here.md): executive summary, functional guide, user guide, architecture, technical reference and rule catalog, security and threat model, evidence and methodology, legal notes, agents and skills, FAQ, roadmap. Regenerate HTML with `npm run docs`.
 
 ## Agent skills
 
